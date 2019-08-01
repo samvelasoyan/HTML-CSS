@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+div{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background-color: orange;
+}
+</style>
+<body> 
+    <section onmouseover="random()" onclick="orange()" onmousedown="transparent()"  style="width: 500px">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </section>
+    <script>
+        var div = document.getElementsByTagName("div")
+        function random(){
+        for(var i = 0; i < div.length; i++){
+            div[i].style.backgroundColor = `#${Math.round(Math.random()*1000000)}`
+        }
+        }
+
+        function orange(){
+        for(var i = 0; i < div.length; i++){
+            div[i].style.backgroundColor = "orange"
+        }
+        }
+        
+        function transparent(){
+        for(var i = 0; i < div.length; i++){
+            div[i].style.backgroundColor = "transparent"
+        }
+        }
+    </script>
+</body>
+</html>
