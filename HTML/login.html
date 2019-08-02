@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box
+        }
+        section{
+            margin: -7px;
+            background: linear-gradient(to right bottom , aqua, aquamarine, aliceblue);
+            width: 100vw;
+            height: 100vw;
+        }
+        div{
+            text-align: center;
+            position: relative;
+            left: 30vw;
+            top: 10vw;
+            background: transparent;
+            width: 40vw;
+            height: 30vw;
+            position: relative;
+        }
+        header{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: aliceblue;
+            font-size: 4vw;
+            margin: 1vw
+        }
+        input{
+            margin: 1vw;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: rgba(122, 122, 122, 0.2);
+            border-radius: 1vw;
+            width: 25vw;
+            height: 5vw;
+            color: aliceblue;
+            text-align: center;
+            font-size: 2vw;
+            border: transparent;
+        }
+        button{
+            margin: 1vw;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(240, 248, 255, 0.9);
+            border-radius: 1vw;
+            width: 25vw;
+            height: 5vw;
+            color: rgba(122, 122, 122);
+            text-align: center;
+            font-size: 2vw;
+            border: transparent;
+        }
+    </style>
+
+</head> 
+<body>
+     <section>
+         <form action="login" target="_blank">
+         <div>
+            <header>Welcome!</header>
+            <input type="email" name="username" id="username" placeholder="E-mail" required autofocus>
+            <input type="password" name="password" id="password" placeholder="Password"><br>
+            <button type="submit">Log in</button>
+         </div>
+        </form>
+     </section>
+</body>
+</html>
