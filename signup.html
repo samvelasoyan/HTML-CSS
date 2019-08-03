@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box
+    }
+    body{
+        background: linear-gradient(to right bottom, rgb(26, 43, 43), rgb(32, 37, 41)) no-repeat;
+        height: 100vw
+    }
+    #Div1{
+        position: relative;
+        left: 25vw;
+        top: 10vw;
+        border: 3px solid aquamarine;
+        border-radius: 1vw;
+        background: transparent;
+        width: 50vw;
+        height: 40vw;
+        position: relative;
+        box-shadow: 0 15px 20px aqua
+    }
+    header{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: aliceblue;
+        font-size: 3.5vw;
+        margin: 1vw;
+        margin-left: 4vw;
+        margin-bottom: 2vw;
+        height: 2vw;
+    }
+    input{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgba(122, 122, 122, 0.2);
+        margin-left: 2vw;
+        margin-top: 2vw;
+        width: 20vw;
+        height: 4vw;
+        color: aliceblue;
+        text-align: start;
+        padding-left: 1vw;
+        font-size: 2vw;
+        border: transparent;
+        border-radius: 1vw;
+    }
+    .radioinput{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgba(122, 122, 122, 0.2);
+        margin-left: 2vw;
+        margin-top: 3vw;
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    button{
+        margin-right: 5vw;
+        margin-top: 3vw;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(240, 248, 255, 0.9);
+        border-radius: 1vw;
+        width: 15vw;
+        height: 8vw;
+        color: rgb(32, 37, 41);
+        text-align: center;
+        font-size: 3vw;
+        border: transparent; 
+    }
+    section{
+        width: 100%;
+        height: 8vw;
+        float: bottom;
+    }
+</style>
+<body>
+    <div id="Div1">
+        <header>Sign up</header>
+        <form action="sign up" target="_blank">
+            <input type="text" name="firstname" id="name" placeholder="First Name" autofocus>
+            <input type="text" name="lastname" id="name" placeholder="Last Name">
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <input type="date" name="date" id="date" placeholder="Birth Date">
+            <input type="password" name="password" id="password" placeholder="Create Password">
+            <input type="password" name="password" id="password" placeholder="Confirm Password"><br>
+            <section>
+        <div style="float: left">
+            <label style="margin-left: 2vw; color: aliceblue; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Gender
+            <input class="radioinput" type="radio" name="gender" value="male">Male
+            <input class="radioinput" type="radio" name="gender" value="female">Female
+            </label><br>
+            <label style="margin-left: 2vw; color: aliceblue; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">What does this equal? 3+2
+            <input type="number" name="number" style="width: 5vw" maxlength="1" pattern="\d [0-9]">
+        </div>
+        <div style="float: right"><button type="submit" formnovalidate="formnovalidate">Sign up</button></div>
+        </section>
+        </label>
+        </form>
+    </div>
+</body>
+</html>
