@@ -7,19 +7,27 @@ body,html{
     margin: 0;
     padding: 0;
 }
+#wrapper{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 .root{
     position: relative;
-    max-width: 1000px;
+    width: 100%;
     height: auto;
     margin: auto;
     border: 0px;
 }
 .parent{
     position: relative;
-    max-width: 1000px;
+    width: 100%;
     height: auto;
     margin: auto;
-    opacity: 0.9;
 }
 .links{
     position: absolute;
@@ -50,10 +58,10 @@ body,html{
     position: absolute;
     height: 100%;
 }
-i{
+.links i{
     width: 10%;
     height: 10%;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 ul {
     list-style-type: none;
@@ -73,7 +81,7 @@ li a{
     padding: 0 10px;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 1.5vw;
+    font-size: 0.7vw
 }
 li a:hover{
     color: tomato;
@@ -91,31 +99,32 @@ li a:hover{
 h4{
     font-family: sans-serif; 
     text-decoration: underline; 
-    font-size: 2vw;
+    font-size: 1vw;
     margin-bottom: 0
 }
 p{
     font-family: sans-serif; 
-    font-size: 1vw
+    font-size: 0.7vw
 }
 button{
     color: aliceblue;
     background-color: tomato;
     border: tomato;
     border-radius: 0.1vw;
-    font-size: 0.7vw;
+    font-size: 0.5vw;
     font-weight: bold;
-    padding: 1% 4% 1% 4%
+    padding: 1% 4% 1% 4%;
+    outline: none;
 }
 #pictures{
     display: flex;
     justify-content: center;
 }
 #pictures div{
-    width: 14vw;
+    width: 15%;
     margin: 2%;
     justify-content: center;
-    height: 13.7vw;
+    height: 6vw;
     position: relative;
     border-radius: 0.5vw
 }
@@ -128,50 +137,22 @@ button{
     transform: translate(-50%, -50%)
 }
           /*for tablets*/
-@media screen and (max-width:700px){
+@media only screen and (max-width:700px){
     #pictures{
         flex-wrap: wrap
     }
     #pictures div{
-        width: 46%;
-        margin: auto;
+        margin: 0 10% ;
         margin-bottom: 5%;
-        height: 45vw;
-    }
-    #pictures i{
-        font-size: 8vw
-    }
-    h4{
-        font-size: 3.5vw;
-    }
-    p{
-        font-size: 1.5vw;
-    }
-    button{
-        font-size: 1vw
     }
 }
            /*for mobile*/
-@media screen and (max-width:500px){
+@media only screen and (max-width:500px){
     #pictures{
         flex-wrap: wrap
     }
     #pictures div{
-        width: 80%;
-        margin: auto;
+        margin: 0 20% ;
         margin-bottom: 5%;
-        height: 80vw;
-    }
-    #pictures i{
-        font-size: 14vw
-    }
-    h4{
-        font-size: 4vw;
-    }
-    p{
-        font-size: 1.5vw;
-    }
-    button{
-        font-size: 1vw
     }
 }
