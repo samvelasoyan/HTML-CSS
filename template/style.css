@@ -112,9 +112,9 @@ button{
     justify-content: center;
 }
 #pictures div{
-    width: 13vw;
+    width: 14vw;
     margin: 2%;
-    justify-content:center;
+    justify-content: center;
     height: 13.7vw;
     position: relative;
     border-radius: 0.5vw
@@ -126,4 +126,52 @@ button{
     top: 47%;
     left: 47%;
     transform: translate(-50%, -50%)
+}
+          /*for tablets*/
+@media screen and (max-width:700px){
+    #pictures{
+        flex-wrap: wrap
+    }
+    #pictures div{
+        width: 46%;
+        margin: auto;
+        margin-bottom: 5%;
+        height: 45vw;
+    }
+    #pictures i{
+        font-size: 8vw
+    }
+    h4{
+        font-size: 3.5vw;
+    }
+    p{
+        font-size: 1.5vw;
+    }
+    button{
+        font-size: 1vw
+    }
+}
+           /*for mobile*/
+@media screen and (max-width:500px){
+    #pictures{
+        flex-wrap: wrap
+    }
+    #pictures div{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5%;
+        height: 80vw;
+    }
+    #pictures i{
+        font-size: 14vw
+    }
+    h4{
+        font-size: 4vw;
+    }
+    p{
+        font-size: 1.5vw;
+    }
+    button{
+        font-size: 1vw
+    }
 }
