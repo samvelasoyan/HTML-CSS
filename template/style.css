@@ -19,14 +19,17 @@ body,html{
 .root{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 30%;
     margin: auto;
     border: 0px;
+    background-image: url(/HTML-CSS/template/images/slide1.jpg);
+    background-size: cover;
+    background-color: black;
 }
 .parent{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 70%;
     margin: auto;
 }
 .links{
@@ -137,7 +140,7 @@ button{
     transform: translate(-50%, -50%)
 }
           /*for tablets*/
-@media only screen and (max-width:700px){
+@media only screen and (max-width:1000px){
     #pictures{
         flex-wrap: wrap
     }
@@ -147,7 +150,7 @@ button{
     }
 }
            /*for mobile*/
-@media only screen and (max-width:500px){
+@media only screen and (max-width:800px){
     #pictures{
         flex-wrap: wrap
     }
