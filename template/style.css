@@ -11,7 +11,7 @@ body,html{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -44,22 +44,25 @@ body,html{
     width: 40%;
 }
 .navigation{
+    justify-content: space-between;
     position: absolute;
     margin: auto;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0;
-    height: 15%;
+    height: 45px;
     top: 30%; 
     width: 80%;
     background-color: aliceblue
 }
-.navLeft{
-    display: inline-block;
+.navLeft{ 
     font-family: sans-serif;
     color: tomato;
     position: absolute;
     height: 100%;
+}
+#nav{
+    justify-content: flex-end;
 }
 .links i{
     width: 10%;
@@ -84,7 +87,7 @@ li a{
     padding: 0 10px;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 0.7vw
+    font-size: 12px;
 }
 li a:hover{
     color: tomato;
@@ -94,20 +97,19 @@ li a:hover{
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 2%;
+    padding: 0;
     height: auto;
     text-align: center;
-    width: 40%;
+    width: 200px;
 }
 h4{
     font-family: sans-serif; 
     text-decoration: underline; 
-    font-size: 1vw;
     margin-bottom: 0
 }
 p{
     font-family: sans-serif; 
-    font-size: 0.7vw
+    font-size: 10px
 }
 button{
     color: aliceblue;
@@ -122,12 +124,14 @@ button{
 #pictures{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #pictures div{
-    width: 15%;
+    width: 100px;
+    height: 100px;
     margin: 2%;
-    justify-content: center;
-    height: 6vw;
+    justify-content: space-evenly;
     position: relative;
     border-radius: 0.5vw
 }
@@ -139,7 +143,7 @@ button{
     left: 47%;
     transform: translate(-50%, -50%)
 }
-          /*for tablets*/
+          /*for tablets
 @media only screen and (max-width:1000px){
     #pictures{
         flex-wrap: wrap
@@ -148,8 +152,8 @@ button{
         margin: 0 10% ;
         margin-bottom: 5%;
     }
-}
-           /*for mobile*/
+}*/
+           /*for mobile
 @media only screen and (max-width:800px){
     #pictures{
         flex-wrap: wrap
@@ -158,4 +162,4 @@ button{
         margin: 0 20% ;
         margin-bottom: 5%;
     }
-}
+}*/
