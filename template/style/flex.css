@@ -31,7 +31,7 @@ html,body{
 .navLeft{
     height: 100%;
     width: 30%;
-    background: url(/template/images/logo.png) no-repeat;
+    background: url(/HTML-CSS/template/images/logo.png) no-repeat;
     padding: 30px 0 0 124px;
 }
 .navLeft span{
@@ -110,8 +110,6 @@ html,body{
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    /*background: url(/template/images/slide2.jpg) no-repeat;
-    background-size: cover;*/
     margin: 0;
     z-index: 99;
 }
@@ -156,7 +154,7 @@ html,body{
 .caption1{
     align-self: center;
     text-align: center;
-    margin-bottom: 6%;
+    margin-bottom: 15%;
     color: aliceblue;
     font-weight: 100;
     font-size: 18px;
@@ -179,7 +177,7 @@ html,body{
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 140px;
+    padding-top: 10%;
 }
 .caption2{
     text-align: center;
