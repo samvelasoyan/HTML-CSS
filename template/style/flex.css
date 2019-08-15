@@ -31,7 +31,7 @@ html,body{
 .navLeft{
     height: 100%;
     width: 30%;
-    background: url(/HTML-CSS/template/images/logo.png) no-repeat;
+    background: url(/template/images/logo.png) no-repeat;
     padding: 30px 0 0 124px;
 }
 .navLeft span{
