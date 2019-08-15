@@ -520,16 +520,12 @@ html,body{
         width: 95%
     }
     .box-item{
-        width: 500px;
-    }
-    #portfolio .box-item{
-        height: 500px;
-    }
-    #portfolio .box-text{
-        height: 100%;
+        width: 480px;
+        height: 480px;
     }
     #team .box-item{
-        height: 500px;
+        height: 480px;
+        margin: 15px 0 0 0
     }
     .txt, .statistics{
         width: 100%; 
