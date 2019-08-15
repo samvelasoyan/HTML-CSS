@@ -179,6 +179,9 @@ html,body{
     height: auto;
     padding-top: 10%;
 }
+#services .box-item{
+    height: 289px;
+}
 .caption2{
     text-align: center;
     margin:auto;
@@ -193,37 +196,55 @@ html,body{
     margin: auto;
 }
 .box{
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 4%;
     flex-wrap: wrap;
     height: auto;
 }
-.box-item{
-    width: 262px;
-    height: 289px;
-    margin: 1%
-}
-.box-image{
+.flip{
+    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    display: block
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.box-item{
+    position: relative;
+    width: 262px;
+    height: 262px;
+    margin: 1%;
+    perspective: 1000px;
+    background-color: transparent;
+}
+.box-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    backface-visibility: hidden;
 }
 .box-image i{
     color: aliceblue;
     font-size: 45px;
     margin-top: 122px
 }
-.box-item:hover .box-image{display: none;} 
-.box-item:hover .box-text{display: block;}
+.box-item:hover .flip{
+    transform: rotateY(180deg)
+}
 .box-text{
     width: 100%;
+    height: 100%;
     margin: auto;
     text-align: center;
     padding: 13% 13%;
     color: aliceblue;   
-    display: none;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ec523f;
 }
 .box-text h3{
     margin: auto;
@@ -241,13 +262,6 @@ html,body{
     width: 100%;
     height: auto;
     padding-top: 140px;
-}
-#portfolio .box-item{
-    height: auto;
-}
-#portfolio .box-text{
-    background-color: #ec523f;
-    height: 100%
 }
 .box-image img{
     width: 100%
@@ -271,18 +285,12 @@ html,body{
     height: auto;
     padding-top: 140px;
 }
-#team .box-item{
-    height: 262px;
-}
 #team .box-image{
-    height: 100%;
     border-radius: 50%;
     background-size: contain;
 }
 #team .box-text{
-    height: 100%;
     border-radius: 50%;
-    background-color: #ec523f;
     padding-top: 20%
 }
 .caption3{
@@ -431,10 +439,8 @@ html,body{
         height: 60%;
     }
     .box-item{
-        width: 212px
-    }
-    #portfolio .box-text{
-        height: 100%;
+        width: 212px;
+        height: 212px;
     }
     #team .box-item{
         height: 212px;
@@ -476,7 +482,6 @@ html,body{
         padding-top: 60px
     }
     #services .box-item{
-        width: 345px;
         height: 289px;
         margin: 15px
     }
@@ -484,9 +489,6 @@ html,body{
         width: 345px;
         height: 345px;
         margin: 15px;
-    }
-    #portfolio .box-text{
-        height: 100%;
     }
     #team .box-item{
         height: 345px;
