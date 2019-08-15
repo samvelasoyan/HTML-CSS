@@ -17,7 +17,7 @@
         <div id="dropMenu" class="bar-opener"><i class="fas fa-bars"></i></div>
         <div class="navRight">
             <ul>
-                <li><a class="active" href="#contact">CONTACT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#">EXTERNAL</a></li>
                 <li><a href="#team">TEAM</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -37,21 +37,42 @@
         </div>
     </div>
     <div id="top">
-        <div><img class="slide" src="/template/images/slide2.jpg" alt="slide2"></div>
-        <div class="site-main">
-            <div class="socialMedia">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="/template/images/slide1.jpg" alt="slide1" style="width: 100%">
+                <div class="caption1">
+                    <h1>DIGITAL MARKETING</h1>
+                    <p>MORE VISITORS TO YOUR WEBSITE</p>
+                </div>
             </div>
-            <div class="caption1">
-                <h1>RESPONSIVE HTML CSS</h1>
-                <p>DOWNLOAD AND USE IT FOR YOUR SITE</p>
-                <a href="#portfolio" class="caption1-btn">GO TO PORTFOLIO</a>
+            <div class="slide fade">
+                <img src="/template/images/slide2.jpg" alt="slide1" style="width: 100%">
+                <div class="caption1">
+                    <h1>RESPONSIVE HTML CSS</h1>
+                    <p>DOWNLOAD AND USE IT FOR YOUR SITE</p>
+                    <a href="#portfolio" class="caption1-btn">GO TO PORTFOLIO</a>
+                </div>
             </div>
+            <div class="slide fade">
+                <img src="/template/images/slide3.jpg" alt="slide1" style="width: 100%;">
+                <div class="caption1">
+                    <h1>PRO LEVEL DESIGN</h1>
+                    <p>HIGH STANDARD WORK</p>
+                </div>
+            </div>
+            <div id="dots" style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="socialMedia">
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
     </div>
         <div id="services">
@@ -306,6 +327,25 @@
     document.getElementById("dropMenu").onclick = function(){open()}
     function open(){
         document.getElementById("Menu").classList.toggle("open")
+    }
+    var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for(i = 0;i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active"; 
+        setTimeout(showSlides, 2500);
     }
 </script>
 </body>

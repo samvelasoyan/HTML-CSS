@@ -7,6 +7,7 @@ html,body{
     height: 100%;
     border: 0;
     margin: 0;
+    scroll-behavior: smooth
 }
 #wrapper{
     width: 100%;
@@ -99,19 +100,41 @@ html,body{
     cursor: pointer;
 }
 #top{
-    position: relative;
-    width: 100%;
-    height: 80%;
-}
-.site-main{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
     height: 100%;
-    margin: 0;
-    z-index: 99;
+}
+.slideshow{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+#dots{
+    position: relative;
+    bottom: 0
+}
+.slide{
+    display: none
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  @keyframes fade {
+    from {opacity: 0.2} 
+    to {opacity: 1}
 }
 .slide{
     position: absolute;
@@ -120,9 +143,10 @@ html,body{
     
 }
 .socialMedia{
+    position: absolute;
     width: 100%;
     height: 100px;
-    padding: 22.5px;
+    padding: 10px;
     align-self: flex-start;
 }
 .social-icons{
@@ -152,9 +176,12 @@ html,body{
     border-radius: 50%;
 }
 .caption1{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     align-self: center;
     text-align: center;
-    margin-bottom: 15%;
     color: aliceblue;
     font-weight: 100;
     font-size: 18px;
@@ -172,12 +199,12 @@ html,body{
     font-size: 13px;
     font-weight: bold;
     color: aliceblue;
+    cursor: pointer;
 }
 #services{
     position: relative;
     width: 100%;
     height: auto;
-    padding-top: 10%;
 }
 #services .box-item{
     height: 289px;
@@ -432,6 +459,9 @@ html,body{
     height: auto;
 }
 @media (max-width: 1200px){
+    #services{
+        padding-top: 14%
+    }
     .navBar{
         width: 970px;
     }
@@ -479,7 +509,7 @@ html,body{
         display: none
     }
     #services{
-        padding-top: 60px
+        padding-top: 10%;
     }
     #services .box-item{
         height: 289px;
@@ -504,6 +534,9 @@ html,body{
     }
 }
 @media (max-width:770px){
+    #services{
+        padding-top: 0px
+    }
     .navBar{
         top: 0;
         width: 95%
