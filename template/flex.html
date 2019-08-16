@@ -43,6 +43,7 @@
                 <div class="caption1">
                     <h1>DIGITAL MARKETING</h1>
                     <p>MORE VISITORS TO YOUR WEBSITE</p>
+                    <a href="#design" class="caption1-btn">LET US DESIGN</a>
                 </div>
             </div>
             <div class="slide fade">
@@ -58,6 +59,7 @@
                 <div class="caption1">
                     <h1>PRO LEVEL DESIGN</h1>
                     <p>HIGH STANDARD WORK</p>
+                    <a href="#" class="caption1-btn">MOBILE WEBSITE</a>
                 </div>
             </div>
             <div id="dots" style="text-align: center">
@@ -214,7 +216,7 @@
                 <h1>OUR TEAM</h1>
                 <p>OUR PEOPLE ARE WERY UNITED FOR YOUR SUCCES</p>
             </div>
-            <div class="box">
+            <div class="box"  id="design">
                 <div class="box-item">
                     <div class="flip">
                         <div class="box-image" style="background-image: url(/template/images/member1.jpg)"></div>
@@ -346,6 +348,18 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active"; 
         setTimeout(showSlides, 2500);
+    }
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("nav");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
     }
 </script>
 </body>

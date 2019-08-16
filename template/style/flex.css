@@ -29,6 +29,10 @@ html,body{
     box-shadow: 0 0 5px 0 lightgrey;
     background-color: white;
 }
+.sticky{
+    position: fixed;
+    top: 0;
+}
 .navLeft{
     height: 100%;
     width: 30%;
