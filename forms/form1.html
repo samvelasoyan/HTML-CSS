@@ -11,12 +11,12 @@
     <div id="wrapper">
         <div class="container">
             <h1>Sign up</h1>
-            <form action="https://webhook.site/90a18d07-a6a8-44a2-aed3-c71d7e7386c2">
+            <form action="https://webhook.site/61d13c1c-02e8-4db5-ab3b-15c20425f283" target="_blank">
                 <input type="text" name="fullname" placeholder="Full Name" required>
-                <input type="email" name="mail" placeholder="Email"required>
+                <input type="email" name="mail" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Create Password" required>
                 <input type="date" name="birthdate" style="width: 47%" required>
-                <input type="number" name="telnumber" placeholder="Your Phone Number" style="width: 46%" required>
+                <input type="number" name="telnumber" pattern="[0-9]{9}" placeholder="Your Phone Number" style="width: 46%" required>
                 <div class="footer">
                     <div class="radio">
                     <input type="radio" name="gender" value="male" checked style="width: 25px;cursor: pointer;">Male
@@ -30,7 +30,7 @@
                         <option value="georgia">Georgia</option>
                         <option value="usa">USA</option>
                     </select>
-                    <input type="submit" style="border: 1.5px solid gray; height: 70px;cursor: pointer;">
+                    <input type="submit" class="submit">
                     </div>
                 </div>
             </form>
