@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/template/style/voyage.css">
+    <script src="https://kit.fontawesome.com/cd602ef1ac.js"></script>
+    <title>Document</title>
+</head>
+<body onresize="left()"></body>
+    <div id="navigation">
+        <div class="voyage"></div>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">DESTINATIONS</a></li>
+            <li><a href="#">CRUISES</a></li>
+            <li><a href="#">SPECIALS</a></li>
+            <li><a href="#">HOLIDAYS</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li class="search-icon"></li>
+        </ul>
+    </div>
+    <div id="head-container">
+        <div class="pic-container"></div>
+        <div class="txt">
+            <h1 style="font-size: 40px">TO TRAVEL IS TO LIVE</h1>
+            <p style="font-size: 25px">You Don't Need Magic to Disappear. All you need is destination.</p>
+            <button>SHOW ON THE MAP</button>
+            <button> MORE INFO</button>
+        </div>
+    </div>
+    <div id="search-bar">
+        <div class="bar">
+            <div class="text">
+                <p>FIND YOUR</p>
+                <p style="color: white; font-size: 30px"><strong>HOLIDAYS</strong></p>
+            </div>
+            <div class="input-container">
+                <p style="display: inline-block; margin: 0;">Where</p>
+                <div class="icon"><input type="text" placeholder="Destination"><i class="fas fa-globe-asia"></i></div>
+            </div>
+            <div class="input-container">
+                    <p style="display: inline-block; margin: 0;">When</p>
+                    <div class="icon"><input type="text" placeholder="Select Date"><i class="fas fa-calendar-alt"></i></div>
+            </div>
+            <button>Search</button>
+        </div>
+    </div>
+    <div id="offers-container">
+        <div class="txt">
+            <h2>SPECIAL OFFERS</h2>
+            <p>Best 2014 packages where people love to stay</p>
+        </div>
+        <div class="left click"><i class="fas fa-chevron-left"></i></div>
+        <div class="offers">
+            <div class="offer">
+                <div class="offer-image" style="background: url(/template/images/voyage/p1.jpg) no-repeat"></div>
+                <div class="offer-txt">
+                    <div>
+                        <h4>Hong Kong & Macau</h4>
+                        <p>Bonus Extras!</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-image" style="background: url(/template/images/voyage/p2.jpg) no-repeat"></div>
+                <div class="offer-txt">
+                    <div>
+                        <h4>Hong Kong & Macau</h4>
+                        <p>Bonus Extras!</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-image" style="background: url(/template/images/voyage/p3.jpg) no-repeat"></div>
+                <div class="offer-txt">
+                    <div>
+                        <h4>Hong Kong & Macau</h4>
+                        <p>Bonus Extras!</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-image" style="background: url(/template/images/voyage/p4.jpg) no-repeat"></div>
+                <div class="offer-txt">
+                    <div>
+                        <h4>Hong Kong & Macau</h4>
+                        <p>Bonus Extras!</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-image" style="background: url(/template/images/voyage/p5.jpg) no-repeat"></div>
+                <div class="offer-txt">
+                    <div>
+                        <h4>Hong Kong & Macau</h4>
+                        <p>Bonus Extras!</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-image" style="background: url(/template/images/voyage/p6.jpg) no-repeat"></div>
+                <div class="offer-txt">
+                    <div>
+                        <h4>Hong Kong & Macau</h4>
+                        <p>Bonus Extras!</p>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="right click"><i class="fas fa-chevron-right"></i></div>
+    </div>
+    <div id="type-container">
+        <div class="type-image"></div>
+        <div class="txt">
+            <h2>HOLIDAYS TYPE</h2>
+            <P style="color: #a8b4c0">explore your dream to travel the world!</P>
+        </div>
+        <div class="type-icons">
+            <div class="type-icon">
+                <div class="logo first"></div>
+                <p>Cruise</p>
+            </div>
+            <div class="type-icon">
+                <div class="logo second"></div>
+                <p>City Breaks</p>
+            </div>
+            <div class="type-icon">
+                <div class="logo third"></div>
+                <p>Honeymoon</p>
+            </div>
+            <div class="type-icon">
+                <div class="logo fourth"></div>
+                <p>Adventure</p>
+            </div>
+            <div class="type-icon">
+                <div class="logo fifth"></div>
+                <p>Safari</p>
+            </div>
+            <div class="type-icon">
+                <div class="logo sixsth"></div>
+                <p>Beach</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementsByClassName("click");
+        var offers = document.getElementsByClassName("offers")[0];
+        btn[0].addEventListener("click", function(){
+                offers.style.left = 0
+        })
+        btn[1].addEventListener("click", function(){
+                offers.style.left = -230 - (screen.width - window.innerWidth) + "px"
+        })
+        function left(){
+            offers.style.left = 0
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+#navigation{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    z-index: 999;
+    padding: 0 15%
+}
+.search-icon{
+    background: url(/template/images/voyage/search-icon.png) no-repeat;
+    width: 42px;
+    height: 42px;
+    margin: 30px 0;
+    padding: 0;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 100%;
+    margin: 0;
+    float: right;
+}
+li{
+    padding: 41px 0
+}
+a{
+    text-decoration: none;
+    color: #5D6E80;
+    cursor: pointer;
+    transition: 150ms;
+}
+a:hover{
+    color: #2BD5B4
+}
+.voyage{
+    background: url(/template/images/voyage/logo.png) no-repeat;
+    background-size: contain;
+    width: 120px;
+    height: 28px;
+    display: inline-block;
+    margin: 36px 0;
+}
+#head-container{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+.pic-container{
+    width: 100%;
+    height: 100%;
+    background: url(/template/images/voyage/slider-bg.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.txt{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    line-height: 20px
+}
+.txt>button{
+    padding: 13px;
+    margin: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 200ms;
+    outline: none;
+}
+.txt>button:hover{
+    background-color: #2BD5B4;
+    border-color: #2BD5B4;
+}
+#search-bar{
+    width: 100%;
+    height: 85px;
+    background-color: #2C3E50;
+}
+.bar{
+    width: 100%;
+    height: 100%;
+    padding: 0 15%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #9FB0C0
+}
+.text{
+    padding: 5px;
+    line-height: 5px;
+}
+.input-container{
+    padding: 24px 0
+}
+.icon{
+    background-color: white;
+    width: 70%;
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 0 15px
+}
+.icon>input{
+    padding: 0 10px;
+    border: 0;
+    outline: 0;
+    width: 88%;
+    font-size: 20px
+}
+.icon>i{
+    font-size: 25px;
+}
+.bar>button{
+    font-size: 18px;
+    padding: 5px 10px;
+    height: 38px;
+    margin-top: 24px;
+    border: 0;
+    background-color: #2BD5B4;
+    color: white;
+    cursor: pointer;
+    transition: 200ms;
+    outline: none;
+}
+.bar>button:hover{
+    background-color: #21a58b
+}
+#offers-container{
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+#offers-container>.txt{
+    color: #2C3E50;
+    height: auto;
+    top: 50px;
+    position: relative;
+}
+.offers{
+    display: flex;
+    width: 120%;
+    height: 80%;
+    position: relative;
+    margin-left: 10px;
+    left: 0;
+    padding: 40px 0;
+    transition: 500ms;
+}
+.offer{
+    width: 271px;
+    height: 300px;
+    background-color: #eeeeee;
+    border: 3px solid #eeeeee;
+    transition: 400ms
+}
+.offer:hover{
+    transform: scale(1.1);
+    border-color: #2BD5B4;
+    background-color: #2C3E50
+}
+.offer:hover .offer-txt h4{color: #eeeeee}
+.offer:hover .offer-txt i{color: #eeeeee}
+.offer-image{
+    width: 265px;
+    height: 225px;
+    background-size: contain;
+}
+.offer-txt>div{
+    padding: 4px;
+    line-height: 0;
+    display: inline-block;
+    color: #5D6E80;
+    cursor: pointer;
+}
+.offer-txt>i{
+    float: right;
+    padding: 26px 20px;
+    color: #5D6E80
+}
+.left{
+    left: 0.2%;
+    top: 50%;
+    z-index: 999;
+}
+.right{
+    right: 0;
+    top: 50%;
+}
+.click{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #2C3E50;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #eeeeee;
+    transition: 200ms;
+}
+.click:hover{
+    background-color: #2BD5B4;
+    color: #2C3E50
+}
+#type-container{
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+.type-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(/template/images/voyage/type-bg.jpg) no-repeat;
+    background-size: cover;
+}
+#type-container>.txt{
+    top: 25%;
+    position: relative;
+}
+.type-icons{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 20%;
+    padding: 0 20%;
+    justify-content: space-evenly;
+}
+.type-icon{
+    width: 130px;
+    height: 176px;
+    padding: 2px;
+    color: #9FB0C0;
+    font-size: 20px;
+    text-align: center;
+}
+.logo{
+    width: 126px;
+    height: 126px;
+    background: url(/template/images/voyage/big-icons.png) no-repeat;
+    background-position-y: -126px
+}
+.first{
+    background-position-x: 0px
+}
+.second{
+    background-position-x: -155px
+}
+.third{
+    background-position-x: -310px
+}
+.fourth{
+    background-position-x: -465px
+}
+.fifth{
+    background-position-x: -620px
+}
+.sixsth{
+    background-position-x: -775px
+}
+.logo:hover{
+    background-position-y: 1.5px
+}
+.logo:hover~p{
+    color: #2BD5B4
+}
