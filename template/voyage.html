@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link rel="stylesheet" href="/template/style/voyage.css">
     <script src="https://kit.fontawesome.com/cd602ef1ac.js"></script>
     <title>Document</title>
@@ -18,8 +19,18 @@
             <li><a href="#">SPECIALS</a></li>
             <li><a href="#">HOLIDAYS</a></li>
             <li><a href="#">BLOG</a></li>
-            <li class="search-icon"></li>
         </ul>
+        <div class="search-icon"></div>
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <ul class="dropdown">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">DESTINATIONS</a></li>
+            <li><a href="#">CRUISES</a></li>
+            <li><a href="#">SPECIALS</a></li>
+            <li><a href="#">HOLIDAYS</a></li>
+            <li><a href="#">BLOG</a></li>
+        </ul>
+        <input type="search" class="search" placeholder="Enter your search term..." autofocus>
     </div>
     <div id="head-container">
         <div class="pic-container"></div>
@@ -37,11 +48,11 @@
                 <p style="color: white; font-size: 30px"><strong>HOLIDAYS</strong></p>
             </div>
             <div class="input-container">
-                <p style="display: inline-block; margin: 0;">Where</p>
+                <p>Where</p>
                 <div class="icon"><input type="text" placeholder="Destination"><i class="fas fa-globe-asia"></i></div>
             </div>
             <div class="input-container">
-                    <p style="display: inline-block; margin: 0;">When</p>
+                    <p>When</p>
                     <div class="icon"><input type="text" placeholder="Select Date"><i class="fas fa-calendar-alt"></i></div>
             </div>
             <button>Search</button>
@@ -153,15 +164,25 @@
     <script>
         var btn = document.getElementsByClassName("click");
         var offers = document.getElementsByClassName("offers")[0];
+        var search = document.getElementsByClassName("search-icon")[0];
+        var input = document.getElementsByClassName("search")[0];
+        var menu = document.getElementsByClassName("menu")[0];
+        var dropdown = document.getElementsByClassName("dropdown")[0];
         btn[0].addEventListener("click", function(){
-                offers.style.left = 0
+            offers.style.left = 0
         })
         btn[1].addEventListener("click", function(){
-                offers.style.left = -230 - (screen.width - window.innerWidth) + "px"
+            offers.style.left = -310 - (screen.width - window.innerWidth) + "px"
         })
         function left(){
             offers.style.left = 0
         }
+        search.addEventListener("click", function(){
+            input.classList.toggle("show");
+        })
+        menu.addEventListener("click", function(){
+            dropdown.classList.toggle("open")
+        })
     </script>
 </body>
 </html>

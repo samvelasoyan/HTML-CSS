@@ -16,7 +16,8 @@ html,body{
     background-color: white;
     position: relative;
     z-index: 999;
-    padding: 0 15%
+    padding: 0 15%;
+    color: #5D6E80
 }
 .search-icon{
     background: url(/template/images/voyage/search-icon.png) no-repeat;
@@ -25,18 +26,25 @@ html,body{
     margin: 30px 0;
     padding: 0;
     cursor: pointer;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    right: 15%;
 }
 ul{
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0;
     float: right;
+    text-align: right;
+    margin-right: 3%;
 }
 li{
-    padding: 41px 0
+    padding: 41px 0;
+    background-color: white;
 }
 a{
     text-decoration: none;
@@ -54,6 +62,55 @@ a:hover{
     height: 28px;
     display: inline-block;
     margin: 36px 0;
+}
+.menu{
+    position: absolute;
+    top: 27%;
+    right: 10%;
+    margin-right: 2%;
+    font-size: 42px;
+    cursor: pointer;
+    color: #2C3E50;
+    display: none;
+    z-index: 99;
+}
+.dropdown{
+    list-style-type: none;
+    position: absolute;
+    top: 0px;
+    right: 8%;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 200ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.open{
+    top: 100px;
+    opacity: 1;
+}
+.dropdown>li{
+    padding: 20px 20px;
+    transition: 200ms;
+}
+.search{
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    padding: 0;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    transition: 200ms;
+}
+.show{
+    width: 47%;
+    padding: 10px 15px;
 }
 #head-container{
     width: 100%;
@@ -112,6 +169,10 @@ a:hover{
 .input-container{
     padding: 24px 0
 }
+.input-container>p{
+    display: inline-block;
+    margin: 0;
+}
 .icon{
     background-color: white;
     width: 70%;
@@ -124,10 +185,12 @@ a:hover{
     border: 0;
     outline: 0;
     width: 88%;
-    font-size: 20px
+    font-size: 20px;
+    float: left;
 }
 .icon>i{
     font-size: 25px;
+    float: right;
 }
 .bar>button{
     font-size: 18px;
@@ -142,7 +205,7 @@ a:hover{
     outline: none;
 }
 .bar>button:hover{
-    background-color: #21a58b
+    background-color: #9FB0C0
 }
 #offers-container{
     width: 100%;
@@ -168,6 +231,7 @@ a:hover{
 .offer{
     width: 271px;
     height: 300px;
+    margin: 0 8px;
     background-color: #eeeeee;
     border: 3px solid #eeeeee;
     transition: 400ms
@@ -253,6 +317,11 @@ a:hover{
     color: #9FB0C0;
     font-size: 20px;
     text-align: center;
+    cursor: pointer;
+    transition: 200ms
+}
+.type-icon:hover{
+    color: #21a58b
 }
 .logo{
     width: 126px;
@@ -282,5 +351,106 @@ a:hover{
     background-position-y: 1.5px
 }
 .logo:hover~p{
-    color: #2BD5B4
+    color: #21a58b;
+}
+@media screen and (max-width: 1350px){
+    #navigation{
+        padding: 0 10%;
+    }
+    .show{
+        width: 60%;
+        right: 15%;
+    }
+    .bar{
+        padding: 0 10%
+    }
+    .icon>input{
+        width: 70%
+    }
+    .search-icon{
+        right: 10%;
+    }
+}
+@media screen and (max-width: 1000px){
+    #navigation{
+        padding: 0 2%;
+    }
+    .show{
+        width: 68%;
+        right: 10%;
+    }
+    .bar{
+        padding: 0 2%;
+    }
+    .search-icon{
+        right: 2%;
+    }
+    .search{
+        right: 8%;
+    }
+}
+@media screen and (max-width: 830px){
+    .show{
+        width: 55%;
+        right: 18%;
+    }
+    #search-bar{
+        height: auto;
+        text-align: center;
+    }
+    .bar{
+        flex-direction: column;
+        padding: 5% 5%;
+    }
+    .bar p{
+        float: left;
+        margin: 0 2px
+    }
+    .icon{
+        width: 90%;
+    }
+    .input-container{
+        padding: 10px;
+    }
+    .input-container>p{
+        display: block;
+    }
+    .bar>button{
+        width: 88%;
+        margin-left: 6% 
+    }
+    #type-container{
+        height: auto
+    }
+    #type-container>.txt{
+        top: 20px;
+        transform: translate(0)
+    }
+    .type-icons{
+        flex-wrap: wrap;
+        margin: 5% 0 
+    }
+    #offers-container{
+        height: auto;
+    }
+    .offers{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center
+    }
+    .offer{
+        margin: 2% 2%
+    }
+    .click{
+        display: none;
+    }
+    ul:first-of-type{
+        display: none
+    }
+    .menu{
+        display: block;
+    }
+    .open{
+        visibility: visible;
+    }
 }
