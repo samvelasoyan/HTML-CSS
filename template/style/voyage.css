@@ -8,7 +8,59 @@ html,body{
     border: 0;
     margin: 0;
     padding: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#social-media{
+    width: 100%;
+    height: 40px;
+    background-color: #2C3E50;
+    padding: 0 15%;
+}
+.contact{
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+.contact>li{
+    padding: 8px;
+    border-right: 1px ridge #28323C;
+    display: inline-block;
+}
+#social-media a{
+    color: #eeeeee;
+    font-weight: normal;
+}
+.social-icons{
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.social-icons>li{
+    height: 40px;
+    width: 45px;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    border-right: 1px ridge #28323C;
+    border-left: 1px ridge #28323C;
+    display: inline-block;
+    transition: 200ms
+}
+.social-icons>li:first-child:hover{
+    background-color: #3D5A99
+}
+.social-icons>li:nth-child(2):hover{
+    background-color: #359BED
+}
+.social-icons>li:nth-child(3):hover{
+    background-color: #3B5876
+}
+.social-icons>li:nth-child(4):hover{
+    background-color: #CC1D24
 }
 #navigation{
     width: 100%;
@@ -31,7 +83,7 @@ html,body{
     top: 0;
     right: 15%;
 }
-ul{
+#navigation>ul:first-of-type{
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
@@ -42,12 +94,13 @@ ul{
     text-align: right;
     margin-right: 3%;
 }
-li{
+#navigation>ul:first-of-type>li{
     padding: 41px 0;
     background-color: white;
 }
 a{
     text-decoration: none;
+    font-weight: bold;
     color: #5D6E80;
     cursor: pointer;
     transition: 150ms;
@@ -65,7 +118,7 @@ a:hover{
 }
 .menu{
     position: absolute;
-    top: 27%;
+    top: 22%;
     right: 10%;
     margin-right: 2%;
     font-size: 42px;
@@ -78,8 +131,9 @@ a:hover{
     list-style-type: none;
     position: absolute;
     top: 0px;
-    right: 8%;
-    width: auto;
+    width: 110%;
+    margin: 0;
+    left: -10%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -90,11 +144,12 @@ a:hover{
 }
 .open{
     top: 100px;
-    opacity: 1;
+    opacity: 0.9;
 }
 .dropdown>li{
     padding: 20px 20px;
     transition: 200ms;
+    background-color: #eeeeee
 }
 .search{
     position: absolute;
@@ -220,8 +275,8 @@ a:hover{
 }
 .offers{
     display: flex;
-    width: 120%;
-    height: 80%;
+    width: 2168px;
+    height: auto;
     position: relative;
     margin-left: 10px;
     left: 0;
@@ -234,7 +289,7 @@ a:hover{
     margin: 0 8px;
     background-color: #eeeeee;
     border: 3px solid #eeeeee;
-    transition: 400ms
+    transition: 700ms
 }
 .offer:hover{
     transform: scale(1.1);
@@ -353,9 +408,26 @@ a:hover{
 .logo:hover~p{
     color: #21a58b;
 }
+.to-top{
+    background: url(/template/images/voyage/to-top.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
 @media screen and (max-width: 1350px){
     #navigation{
         padding: 0 10%;
+    }
+    #social-media{
+        padding: 0 10%
+    }
+    .contact>li:first-child{
+        display: none
     }
     .show{
         width: 60%;
@@ -375,6 +447,9 @@ a:hover{
     #navigation{
         padding: 0 2%;
     }
+    #social-media{
+        padding: 0 2%
+    }
     .show{
         width: 68%;
         right: 10%;
@@ -390,6 +465,12 @@ a:hover{
     }
 }
 @media screen and (max-width: 830px){
+    .contact{display: none}
+    .social-icons{float: none}
+    #social-media{text-align: center}
+    #navigation>ul:first-of-type{
+        display: none
+    }
     .show{
         width: 55%;
         right: 18%;
@@ -420,7 +501,7 @@ a:hover{
         margin-left: 6% 
     }
     #type-container{
-        height: auto
+        height: 80%
     }
     #type-container>.txt{
         top: 20px;
@@ -428,7 +509,8 @@ a:hover{
     }
     .type-icons{
         flex-wrap: wrap;
-        margin: 5% 0 
+        margin: 5% 0;
+        top: 10%
     }
     #offers-container{
         height: auto;
