@@ -27,7 +27,7 @@
     border-bottom: 2px solid ;
     background-color: transparent;
     width: 100px;
-    text-align: center; 
+    
 }
 #addTask{
     font-size: 13px;
@@ -73,6 +73,10 @@ th:last-child{
 }
 .icon a{
     position: relative;
+}
+.icon:last-child{
+    float: right;
+    padding: 8px 0
 }
 .txt{
     font-size: 13px;

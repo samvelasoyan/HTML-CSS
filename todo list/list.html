@@ -23,44 +23,60 @@
                 <tr class="row">
                     <td class="icon"><a href="#"><i class="far fa-circle"></i><i class="far fa-check-circle"></i></a></td>
                     <td class="txt">Prepare for Session</td>
+                    <td class="icon"><a href="#"><i class="fas fa-times"></i></a></td>
                 </tr>
             </table>
         </table>
         <script>
-            var table = document.getElementsByClassName("dropDown")[0];
+            let table = document.getElementsByClassName("dropDown")[0];
             addTask.addEventListener("click", function(){
-                var tr = document.createElement("tr");
-                var td1 = document.createElement("td");
-                var td2 = document.createElement("td");
-                var icons = document.createElement("a");
-                var i1 = document.createElement("i");
-                var i2 = document.createElement("i");
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+                let icon1 = document.createElement("a");
+                let icon2 = document.createElement("a");
+                let i1 = document.createElement("i");
+                let i2 = document.createElement("i");
+                let i3 = document.createElement("i");
                 tr.className = "row";
                 td1.className = "icon";
                 td2.className = "txt";
+                td3.className = "icon";
                 td2.innerHTML = createTask.value;
-                icons.href = "#";
+                icon1.href = "#";
+                icon2.href = "#";
                 i1.className = "far fa-circle";
                 i2.className = "far fa-check-circle";
-                icons.appendChild(i1);
-                icons.appendChild(i2);
-                icons.addEventListener("click", function(){
+                i3.className = "fas fa-times";
+                icon1.appendChild(i1);
+                icon1.appendChild(i2);
+                icon2.appendChild(i3);
+                icon1.addEventListener("click", function(){
                     tr.classList.toggle("checked")
                 })
-                td1.appendChild(icons);
+                td1.appendChild(icon1);
+                td3.appendChild(icon2);
                 tr.appendChild(td1);
-                tr.appendChild(td2)
-                table.appendChild(tr)
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+                icon2.addEventListener("click", function(){
+                    table.removeChild(tr)
+                })
             })    
-            var bar = document.getElementById("dropList");
-            var a = document.getElementsByClassName("icon");
-            var r = document.getElementsByClassName("row");
-            var i = 0;
+            let bar = document.getElementById("dropList");
+            let a = document.getElementsByClassName("icon");
+            let r = document.getElementsByClassName("row");
+            let i = 0;
             bar.addEventListener("click", function(){
                 table.classList.toggle("drop")
             })
             a[0].addEventListener("click", function(){
                 r[0].classList.toggle("checked")
+            })
+            a[1].addEventListener("click", function(){
+                r[0].style.display = "none"
             })
         </script>
     </div>
